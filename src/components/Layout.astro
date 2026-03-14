@@ -1,6 +1,7 @@
 ---
 import Header from './Header.astro';
 import Footer from './Footer.astro';
+import '../css/style.css';
 
 interface Props {
   title?: string;
@@ -75,8 +76,6 @@ const {
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    
-    <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body class="therapy-theme">
     <Header />
@@ -86,7 +85,5 @@ const {
     </main>
     
     <Footer />
-    
-    <script src="/src/js/main.js"></script>
 </body>
 </html>

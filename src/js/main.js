@@ -28,9 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       
       console.log('Formulario enviado:', new FormData(this));
-      
-      alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-      this.reset();
     });
   }
   
@@ -53,18 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.transform = 'translateY(0)';
     });
   });
-});
-
-// Theme switching functionality
-function toggleTheme() {
-  const body = document.body;
-  body.classList.toggle('dark-theme');
   
-  const isDark = body.classList.contains('dark-theme');
-  localStorage.setItem('themePreference', isDark ? 'dark' : 'light');
-}
-
-document.addEventListener('DOMContentLoaded', function() {
+  // Theme switching functionality
   const savedTheme = localStorage.getItem('themePreference');
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-theme');
@@ -74,5 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Responsive navigation menu toggle for mobile
 function toggleMobileMenu() {
   const navMenu = document.querySelector('.navigation');
-  navMenu.classList.toggle('mobile-menu-open');
+  if (navMenu) {
+    navMenu.classList.toggle('mobile-menu-open');
+  }
 }
