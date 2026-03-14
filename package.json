@@ -1,0 +1,20 @@
+{
+  "name": "crecer-jugando",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/solid-js": "^4.4.0",
+    "astro": "^4.15.0",
+    "solid-js": "^1.8.18"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}

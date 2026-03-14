@@ -1,0 +1,251 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout>
+  <div class="main-content">
+    <div class="gallery-header">
+      <h1>Galería de Imágenes</h1>
+      <p>Explora momentos de nuestros talleres, eventos y sesiones terapéuticas</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item large">
+        <img src="https://www.tallercrecerjugando.com.ar/img/1%20(4).jpg" alt="Taller Desoxidando la armadura" class="gallery-img">
+        <div class="gallery-overlay">
+          <h3>Taller "Desoxidando la armadura"</h3>
+          <p>16 Enero 2021 - Via Zoom</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="https://www.tallercrecerjugando.com.ar/img/1%20(3).jpg" alt="Taller Emociones" class="gallery-img">
+        <div class="gallery-overlay">
+          <h3>Taller "Emociones"</h3>
+          <p>12 Diciembre 2020</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="https://www.tallercrecerjugando.com.ar/img/1%20(2).jpg" alt="Nueva Etapa" class="gallery-img">
+        <div class="gallery-overlay">
+          <h3>Nueva Etapa</h3>
+          <p>Talleres Online y Terapia Individual</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="/images/pm3.jpg" alt="Patricia Medina Alonso" class="gallery-img">
+        <div class="gallery-overlay">
+          <h3>Patricia Medina Alonso</h3>
+          <p>Fundadora y Desarrolladora</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="/images/gestalt.png" alt="Gestalt" class="gallery-img">
+        <div class="gallery-overlay">
+          <h3>Terapia Gestalt</h3>
+          <p>Enfoque Experiencial</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item wide">
+        <img src="/images/constelaciones.png" alt="Constelaciones" class="gallery-img">
+        <div class="gallery-overlay">
+          <h3>Constelaciones Familiares</h3>
+          <p>Constelaciones Estructurales y Organizacionales</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="/images/rolfing.png" alt="Rolfing" class="gallery-img">
+        <div class="gallery-overlay">
+          <h3>Rolfing</h3>
+          <p>Integración Estructural</p>
+        </div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="/images/taller.jpg" alt="Dra. Ida Rolf" class="gallery-img">
+        <div class="gallery-overlay">
+          <h3>Dra. Ida Rolf</h3>
+          <p>Creadora del Método Rolfing</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-section">
+      <h2>Nuestros Aliados</h2>
+      <div class="allies-grid">
+        <div class="ally-item">
+          <img src="https://www.tallercrecerjugando.com.ar/img/s11.jpg" alt="Aliado 1">
+        </div>
+        <div class="ally-item">
+          <img src="https://www.tallercrecerjugando.com.ar/img/s22.jpg" alt="Aliado 2">
+        </div>
+        <div class="ally-item">
+          <img src="https://www.tallercrecerjugando.com.ar/img/s33.jpg" alt="Aliado 3">
+        </div>
+        <div class="ally-item">
+          <img src="https://www.tallercrecerjugando.com.ar/img/s44.jpg" alt="Aliado 4">
+        </div>
+        <div class="ally-item">
+          <img src="https://www.tallercrecerjugando.com.ar/img/s55.jpg" alt="Aliado 5">
+        </div>
+        <div class="ally-item">
+          <img src="https://www.tallercrecerjugando.com.ar/img/s66.jpg" alt="Aliado 6">
+        </div>
+        <div class="ally-item">
+          <img src="https://www.tallercrecerjugando.com.ar/img/s77.jpg" alt="Aliado 7">
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-cta">
+      <h2>¿Querés conocernos?</h2>
+      <p>Te invitamos a vivir la experiencia de crecer en un espacio de contención y crecimiento personal.</p>
+      <a href="/contact" class="btn">Contactanos</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .gallery-header {
+    text-align: center;
+    padding: 2rem 0 3rem;
+  }
+  
+  .gallery-header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .gallery-header p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    background: #eee;
+  }
+  
+  .gallery-item.large {
+    grid-column: span 2;
+    aspect-ratio: 16/9;
+  }
+  
+  .gallery-item.wide {
+    grid-column: span 2;
+    aspect-ratio: 16/7;
+  }
+  
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .gallery-item:hover .gallery-img {
+    transform: scale(1.1);
+  }
+  
+  .gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    padding: 1.5rem;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+  }
+  
+  .gallery-overlay h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .gallery-cta {
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+  }
+  
+  .gallery-cta h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .gallery-cta p {
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+  
+  .slider-section {
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .slider-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .allies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .ally-item {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--light-color);
+  }
+  
+  .ally-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-item.large,
+    .gallery-item.wide {
+      grid-column: span 1;
+    }
+    
+    .gallery-header h1 {
+      font-size: 2rem;
+    }
+  }
+</style>

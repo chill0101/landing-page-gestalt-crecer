@@ -1,0 +1,721 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout>
+  <!-- Hero Section with Animated Gradient -->
+  <section class="hero-section">
+    <div class="hero-gradient"></div>
+    <div class="hero-particles">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero-content">
+      <span class="hero-badge">Terapia Gestalt & Constelaciones Familiares</span>
+      <h1>Crecer Jugando <span class="highlight">Gestalt</span></h1>
+      <p class="hero-subtitle">Un espacio creado para el ser exitoso que está en tu interior. Descubre el poder transformador de la terapia gestalt, las constelaciones familiares y el Rolfing.</p>
+      <div class="hero-buttons">
+        <a href="/contact" class="btn btn-primary">Reservar Turno</a>
+        <a href="/about" class="btn btn-outline">Conocenos</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">+500</span>
+          <span class="stat-label">Clientes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Años</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Satisfacción</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="section-header animate-on-scroll fade-up">
+      <span class="section-tag">¿Por qué elegirnos?</span>
+      <h2>Un espacio de transformación</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card animate-on-scroll fade-up" style="animation-delay: 0.1s">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </div>
+        <h3>Enfoque Experiencial</h3>
+        <p>El aprendizaje gestáltico es vivencial, más que intelectual. Partimos del aquí y ahora: ¿Qué me está pasando?</p>
+      </div>
+      <div class="feature-card animate-on-scroll fade-up" style="animation-delay: 0.2s">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 6v6l4 2"></path>
+          </svg>
+        </div>
+        <h3>Enfoque Personalizado</h3>
+        <p>Cada persona es única. Creamos estrategias adaptadas a tus necesidades individuales.</p>
+      </div>
+      <div class="feature-card animate-on-scroll fade-up" style="animation-delay: 0.3s">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h3>Cuerpo-Mente-Emociones</h3>
+        <p>Somos un todo. Lo que la boca calla, el cuerpo habla. Integamos cuerpo, mente y emoción.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-images animate-on-scroll fade-right">
+        <div class="about-img-main">
+          <img src="/images/pm3.jpg" alt="Patricia Medina Alonso - Fundadora">
+        </div>
+        <div class="about-img-float">
+          <img src="/images/taller.jpg" alt="Dra. Ida Rolf - Creadora del Rolfing">
+        </div>
+      </div>
+      <div class="about-content animate-on-scroll fade-left">
+        <span class="section-tag">Sobre Nosotros</span>
+        <h2>Taller de Gestalt y Comunicación</h2>
+        <p>El aprendizaje que tiene lugar en el enfoque gestáltico es experiencial, vivencial, más que intelectual. En la gestalt partimos del aquí y ahora: <strong>¿Qué me está pasando?</strong> (angustias, temor, enojo, miedo, vergüenza, inseguridad).</p>
+        <p>Somos un todo. No tenemos solo un cuerpo. Somos un cuerpo. La comprensión del ser humano con su organismo, sus síntomas.</p>
+        <ul class="about-list">
+          <li>Terapia Individual</li>
+          <li>Constelaciones Familiares</li>
+          <li>Constelaciones Organizacionales</li>
+          <li>Talleres y Capacitaciones</li>
+          <li>Rolfing - Integración Estructural</li>
+        </ul>
+        <a href="/about" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Ver Más</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="section-header animate-on-scroll fade-up">
+      <span class="section-tag">Nuestros Servicios</span>
+      <h2>¿Cómo podemos ayudarte?</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card animate-on-scroll fade-up" style="animation-delay: 0.1s">
+        <div class="service-img">
+          <img src="/images/gestalt.png" alt="Terapia Gestalt">
+        </div>
+        <div class="service-content">
+          <h3>Terapia Gestalt</h3>
+          <p>El enfoque gestáltico es experiencial y vivencial. Partimos del aquí y ahora para explorar angustias, temor, enojo, miedo, culpa, vergüenza e inseguridad.</p>
+          <a href="/contact" class="service-link">Saber más →</a>
+        </div>
+      </div>
+      <div class="service-card animate-on-scroll fade-up" style="animation-delay: 0.2s">
+        <div class="service-img">
+          <img src="/images/constelaciones.png" alt="Constelaciones Familiares">
+        </div>
+        <div class="service-content">
+          <h3>Constelaciones Familiares</h3>
+          <p>Constelaciones Familiares, Estructurales y Organizacionales. Métodos de abordaje para encontrar soluciones mirando historias del pasado familiar no resueltas.</p>
+          <a href="/contact" class="service-link">Saber más →</a>
+        </div>
+      </div>
+      <div class="service-card animate-on-scroll fade-up" style="animation-delay: 0.3s">
+        <div class="service-img">
+          <img src="/images/rolfing.png" alt="Rolfing">
+        </div>
+        <div class="service-content">
+          <h3>Rolfing</h3>
+          <p>Método creado por la Dra. Ida Rolf que corrige patrones negativos y desalineados en el cuerpo. "Lo que la boca calla el cuerpo habla".</p>
+          <a href="/contact" class="service-link">Saber más →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section animate-on-scroll scale-in">
+    <div class="cta-content">
+      <h2>¿Listo para comenzar tu transformación?</h2>
+      <p>El primer paso hacia el cambio siempre es el más importante. Te acompañamos en el proceso.</p>
+      <a href="/contact" class="btn btn-white">Reservar Consulta</a>
+    </div>
+  </section>
+
+<script>
+  import { initScrollAnimations, scrollAnimationStyles } from '../js/scroll-animations.js';
+  
+  const styleSheet = document.createElement('style');
+  styleSheet.textContent = scrollAnimationStyles;
+  document.head.appendChild(styleSheet);
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    initScrollAnimations();
+  });
+  
+  window.addEventListener('load', () => {
+    initScrollAnimations();
+  });
+</script>
+
+<style is:global>
+  /* Las variables están definidas en src/css/style.css */
+
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    margin: -1rem -1rem 3rem;
+    padding: 4rem 2rem;
+  }
+
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, var(--primary-medium) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, var(--secondary-medium) 0%, transparent 40%),
+      radial-gradient(ellipse at 60% 80%, var(--secondary-medium) 0%, transparent 40%);
+    animation: gradientShift 15s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.1); }
+  }
+
+  .hero-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .hero-particles span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    animation: float 20s infinite;
+  }
+
+  .hero-particles span:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+  .hero-particles span:nth-child(2) { left: 20%; top: 60%; animation-delay: 2s; }
+  .hero-particles span:nth-child(3) { left: 60%; top: 30%; animation-delay: 4s; }
+  .hero-particles span:nth-child(4) { left: 80%; top: 70%; animation-delay: 6s; }
+  .hero-particles span:nth-child(5) { left: 40%; top: 80%; animation-delay: 8s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+    50% { transform: translateY(-100px) scale(1.5); opacity: 0.8; }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    text-align: center;
+    color: white;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .hero-section h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .hero-section h1 .highlight {
+    background: linear-gradient(120deg, #ffffff, #e0f7fa, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--dark-color), var(--dark-color));
+    color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--primary-medium);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: white;
+  }
+
+  .btn-white {
+    background: white;
+    color: var(--dark-color);
+  }
+
+  .btn-white:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  /* Section Styles */
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-tag {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    font-weight: 700;
+  }
+
+  /* Features Section */
+  .features-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  }
+
+  .feature-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+
+  .feature-icon svg {
+    width: 32px;
+    height: 32px;
+    color: white;
+  }
+
+  .feature-card h3 {
+    font-size: 1.3rem;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-card p {
+    color: #666;
+    line-height: 1.7;
+  }
+
+  /* About Section */
+  .about-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, var(--light-color) 0%, white 100%);
+    margin: 2rem 0;
+  }
+
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .about-images {
+    position: relative;
+    height: 500px;
+  }
+
+  .about-img-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  }
+
+  .about-img-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-img-float {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    border: 4px solid white;
+  }
+
+  .about-img-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-content .section-tag {
+    text-align: left;
+  }
+
+  .about-content h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+
+  .about-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  .about-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+
+  .about-list li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--dark-color);
+    font-weight: 500;
+  }
+
+  .about-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+
+  /* Services Section */
+  .services-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  }
+
+  .service-img {
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-color);
+    padding: 1rem;
+  }
+
+  .service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+  }
+
+  .service-card:hover .service-img img {
+    transform: scale(1.05);
+  }
+
+  .service-content {
+    padding: 2rem;
+  }
+
+  .service-content h3 {
+    font-size: 1.4rem;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+  }
+
+  .service-content p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .service-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .service-link:hover {
+    color: var(--dark-color);
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    padding: 5rem 2rem;
+    margin: 4rem 0;
+    text-align: center;
+  }
+
+  .cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    color: white;
+  }
+
+  .cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-content p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Gallery Section */
+  .gallery-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .gallery-item {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  .gallery-overlay span {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .gallery-cta {
+    text-align: center;
+  }
+
+  /* Animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .about-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .about-images {
+      height: 350px;
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-section {
+      min-height: auto;
+      padding: 3rem 1rem;
+    }
+
+    .hero-stats {
+      gap: 1.5rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+    }
+
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

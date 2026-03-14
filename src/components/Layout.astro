@@ -1,0 +1,92 @@
+---
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const { 
+  title = "Taller Crecer Jugando - Terapia Gestalt, Constelaciones Familiares y Rolfing",
+  description = "Espacio de crecimiento personal con terapia gestalt, constelaciones familiares y Rolfing. Sesiones individuales, grupales y talleres. Palermo, CABA. +15 años de experiencia.",
+  image = "/images/og-default.svg"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com;
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data: https:;
+      font-src 'self';
+      connect-src 'self' https://formspree.io https://api.formspree.io;
+      frame-src https://challenges.cloudflare.com;
+    ">
+    
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- Referrer Policy -->
+    <meta name="referrer-policy" content="strict-origin-when-cross-origin">
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="terapia gestalt, constelaciones familiares, Rolfing, crecimiento personal, Buenos Aires, terapia individual, terapia grupal, constelaciones organizacionales, integración estructural, Ida Rolf, Palermo, CABA">
+    <meta name="author" content="Crecer Jugando">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crecerjugando.com/">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content={image}>
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://crecerjugando.com/">
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
+    <meta property="twitter:image" content={image}>
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://crecerjugando.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="therapy-theme">
+    <Header />
+    
+    <main class="main-content">
+        <slot />
+    </main>
+    
+    <Footer />
+    
+    <script src="/src/js/main.js"></script>
+</body>
+</html>

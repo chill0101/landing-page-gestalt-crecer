@@ -1,0 +1,192 @@
+---
+// Secure API endpoint for blog management
+import { verifyToken, sanitizeInput } from '../utils/auth.js';
+
+// Rate limiting simple (en memoria - para producción usar Redis)
+const rateLimitMap = new Map();
+const RATE_LIMIT = 10; // requests
+const RATE_WINDOW = 60 * 1000; // 1 minuto
+
+// Check rate limit
+function checkRateLimit(ip) {
+  const now = Date.now();
+  const record = rateLimitMap.get(ip);
+  
+  if (!record) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW });
+    return true;
+  }
+  
+  if (now > record.resetTime) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW });
+    return true;
+  }
+  
+  if (record.count >= RATE_LIMIT) {
+    return false;
+  }
+  
+  record.count++;
+  return true;
+}
+
+// Security headers
+const securityHeaders = {
+  'Content-Type': 'application/json',
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'DENY',
+  'X-XSS-Protection': '1; mode=block'
+};
+
+// Get client IP
+function getClientIP(request) {
+  return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() 
+    || request.headers.get('cf-connecting-ip')
+    || 'unknown';
+}
+
+try {
+  const clientIP = getClientIP(this.request);
+  
+  // Rate limiting
+  if (!checkRateLimit(clientIP)) {
+    return new Response(JSON.stringify({ error: 'Too many requests. Try again later.' }), {
+      status: 429,
+      headers: securityHeaders
+    });
+  }
+  
+  // Verify authentication token
+  const authHeader = this.request.headers.get('Authorization');
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return new Response(JSON.stringify({ error: 'Authorization required' }), {
+      status: 401,
+      headers: securityHeaders
+    });
+  }
+  
+  const isAuthenticated = await verifyToken(authHeader);
+  
+  if (!isAuthenticated) {
+    return new Response(JSON.stringify({ error: 'Invalid or expired token' }), {
+      status: 401,
+      headers: securityHeaders
+    });
+  }
+  
+  // Handle different HTTP methods
+  const method = this.request.method;
+  
+  // Solo métodos seguros
+  const allowedMethods = ['GET', 'POST', 'PUT', 'DELETE'];
+  if (!allowedMethods.includes(method)) {
+    return new Response(JSON.stringify({ error: 'Method not allowed' }), {
+      status: 405,
+      headers: { ...securityHeaders, 'Allow': allowedMethods.join(', ') }
+    });
+  }
+  
+  switch (method) {
+    case 'GET':
+      return new Response(JSON.stringify({ 
+        posts: [], 
+        message: 'Blog posts retrieved successfully' 
+      }), {
+        headers: securityHeaders
+      });
+      
+    case 'POST':
+      try {
+        const postData = await this.request.json();
+        
+        // Sanitizar entrada
+        const sanitized = {
+          title: sanitizeInput(postData.title),
+          content: sanitizeInput(postData.content),
+          author: sanitizeInput(postData.author)
+        };
+        
+        // Validar datos requeridos
+        if (!sanitized.title || sanitized.title.length < 3) {
+          return new Response(JSON.stringify({ error: 'Title must be at least 3 characters' }), {
+            status: 400,
+            headers: securityHeaders
+          });
+        }
+        
+        return new Response(JSON.stringify({ 
+          post: sanitized, 
+          message: 'Blog post created successfully' 
+        }), {
+          status: 201,
+          headers: securityHeaders
+        });
+      } catch (e) {
+        return new Response(JSON.stringify({ error: 'Invalid JSON body' }), {
+          status: 400,
+          headers: securityHeaders
+        });
+      }
+      
+    case 'PUT':
+      try {
+        const updateData = await this.request.json();
+        
+        // Validar ID
+        if (!updateData.id) {
+          return new Response(JSON.stringify({ error: 'Post ID required' }), {
+            status: 400,
+            headers: securityHeaders
+          });
+        }
+        
+        const sanitized = {
+          id: parseInt(updateData.id),
+          title: sanitizeInput(updateData.title),
+          content: sanitizeInput(updateData.content)
+        };
+        
+        return new Response(JSON.stringify({ 
+          post: sanitized, 
+          message: 'Blog post updated successfully' 
+        }), {
+          headers: securityHeaders
+        });
+      } catch (e) {
+        return new Response(JSON.stringify({ error: 'Invalid JSON body' }), {
+          status: 400,
+          headers: securityHeaders
+        });
+      }
+      
+    case 'DELETE':
+      const postId = this.request.headers.get('X-Post-ID');
+      
+      if (!postId) {
+        return new Response(JSON.stringify({ error: 'Post ID required in header' }), {
+          status: 400,
+          headers: securityHeaders
+        });
+      }
+      
+      return new Response(JSON.stringify({ 
+        id: parseInt(postId), 
+        message: 'Blog post deleted successfully' 
+      }), {
+        headers: securityHeaders
+      });
+      
+    default:
+      return new Response(JSON.stringify({ error: 'Method not allowed' }), {
+        status: 405,
+        headers: securityHeaders
+      });
+  }
+} catch (error) {
+  console.error('API Error:', error);
+  return new Response(JSON.stringify({ error: 'Internal server error' }), {
+    status: 500,
+    headers: securityHeaders
+  });
+}
+---

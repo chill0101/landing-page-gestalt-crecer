@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow admin/private areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard?
+Disallow: /src/
+
+Sitemap: https://crecerjugando.com/sitemap.xml

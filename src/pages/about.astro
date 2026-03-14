@@ -1,0 +1,187 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout>
+  <div class="main-content">
+    <div class="dashboard-card">
+      <h1>Sobre Nosotros</h1>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Taller de Gestalt y Comunicación</h2>
+          <p>El aprendizaje que tiene lugar en el enfoque gestáltico es <strong>experiencial, vivencial</strong>, más que intelectual, no analítico.</p>
+          
+          <p>En la gestalt partimos del <strong>aquí y ahora</strong>: <em>¿Qué me está pasando?</em> (angustias, temor, enojo, miedo, vergüenza, inseguridad).</p>
+          
+          <p>Somos un todo. <strong>No tenemos solo un cuerpo</strong>. Somos un cuerpo. La comprensión del ser humano con su organismo, sus síntomas.</p>
+          
+          <p>Las técnicas gestálticas y de comunicación cubren un amplio espectro como el <strong>Rolfing</strong> que corrige patrones negativos y desalineados en el cuerpo por la influencia de la gravedad, en las conductas verbales, no verbales, corporales, atendiendo a la resolución de conflictos, estrés y riesgo psicológico.</p>
+          
+          <h2>Nuestra Filosofía</h2>
+          <p>Creemos en el poder sanador de entender. Este proceso de comunicación es un tipo particular de acción y como tal se realiza paso a paso, a partir de conocimientos que se tiene, más la incorporación de nuevas informaciones.</p>
+        </div>
+        
+        <div class="about-image">
+          <img src="/images/pm3.jpg" alt="Patricia Medina Alonso - Fundadora" style="width:100%; border-radius:8px;">
+          <p style="text-align:center; color: var(--primary-color); font-weight:600; margin-top:1rem;">Patricia Medina Alonso</p>
+          <p style="text-align:center; color:#666; font-size:0.9rem;">Fundadora y Desarrolladora</p>
+        </div>
+      </div>
+      
+      <div class="trayectoria-section">
+        <h2>Trayectoria</h2>
+        <div class="trayectoria-grid">
+          <div class="trayectoria-card">
+            <h3>Experiencia</h3>
+            <ul>
+              <li>Desarrollo de talleres particulares en "Taller Crecer Jugando"</li>
+              <li>Participación en numerosos Congresos Géstalticos</li>
+              <li>Coordinación y dirección de talleres en Fundación Norte Mediación</li>
+              <li>Coordinación y dirección Taller ponencia "Acoso Laboral (Mobbing)" para Unión de Empleados de la Justicia de la Nación</li>
+              <li>Asociación de Mujeres Jueves de Argentina "La Mujer en los Medios"</li>
+            </ul>
+          </div>
+          
+          <div class="trayectoria-card">
+            <h3>Formación</h3>
+            <ul>
+              <li>Universidad de Filosofía y Letras - Ciencias de la Comunicación</li>
+              <li>Centros de Estudios y Difusión de la Comunicación Humana</li>
+              <li>Univ Santo Thomas de Aquino - Psicología</li>
+              <li>Universidad Gama Filho, R. de Janeiro, Brasil - Curso de Marketing</li>
+              <li>Unidad del Trabajo y Estudio, Torino, Italia - Curso de Comunicación</li>
+              <li>Centro Géstaltico de San Isidro - Géstaltista</li>
+              <li>Instituto de Psicología y Psicogenealogía Transgeneracional - Formación en Constelaciones Estructurales y Organizacionales</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="rolfing-section">
+        <h2>Técnica de Rolfing</h2>
+        <div class="rolfing-content">
+          <div class="rolfing-text">
+            <p><strong>Dra. Ida Rolf</strong> creadora del método "ROLFING".</p>
+            <p>La Dra. Ida Rolf se graduó en el Barnard College de Nueva York a sus casi 20 años, era una estudiante con mucho talento y a los 25 años obtuvo su Doctorado en Bioquímica en la Universidad de Columbia.</p>
+            <p>Durante los 7 años siguientes la Dra. Rolf puso en práctica sus conocimientos en el renombrado Instituto Rockefeller de Investigación Médica y consiguió el puesto de Profesora Asociada, algo inusual en aquella época para una mujer.</p>
+            <p>Deseosa de ampliar su desarrollo personal y profesional, viajó a Europa estudió: Matemáticas, Física y Medicina Homeopática en Suiza.</p>
+            <p>Durante 30 años la Dra. Ida Rolf se dedicó a buscar soluciones a los problemas de salud de sus seres queridos, especialmente sus hijos. Poco dispuesta a aceptar las limitaciones de la medicina de su tiempo, estudió un gran número de materias que incluían Osteopatía, Quiropraxia y disciplinas mentales como el Yoga y el Estudio de la Conciencia de Korzybski.</p>
+            <p>La "Integración Estructural" se hizo conocida en todo el mundo como: <strong>ROLFING</strong>.</p>
+          </div>
+          <div class="rolfing-image">
+            <img src="/images/taller.jpg" alt="Dra. Ida Rolf - Creadora del Rolfing" style="width:100%; border-radius:8px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    align-items: start;
+  }
+  
+  .about-text h2 {
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .about-text p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .trayectoria-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .trayectoria-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .trayectoria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .trayectoria-card {
+    background: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .trayectoria-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .trayectoria-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .trayectoria-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--dark-color);
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+  
+  .trayectoria-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .rolfing-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--light-color);
+  }
+  
+  .rolfing-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .rolfing-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    align-items: start;
+  }
+  
+  .rolfing-text p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .rolfing-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
